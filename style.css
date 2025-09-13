@@ -1,0 +1,208 @@
+:root {
+  --verde-escuro: #1b3a2f;
+  --dourado: #d4af37;
+  --laranja: #e67e22;
+  --cinza-claro: #f9f9f9;
+  --cinza-900: #333;
+  --branco: #fff;
+}
+
+body {
+  margin: 0;
+  font-family: 'Poppins', Arial, sans-serif;
+  color: var(--cinza-900);
+  line-height: 1.6;
+  background: var(--branco);
+}
+
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: auto;
+}
+
+header {
+  background: var(--verde-escuro);
+  color: var(--branco);
+  padding: 1rem 0;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+nav ul {
+  display: flex;
+  gap: 1rem;
+  list-style: none;
+}
+
+nav a {
+  color: var(--branco);
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.menu-toggle {
+  display: none;
+  background: none;
+  border: none;
+  color: var(--branco);
+  font-size: 1.8rem;
+}
+
+.hero {
+  background: linear-gradient(rgba(27,58,47,0.7), rgba(27,58,47,0.7)), url("imgfachada.webp.webp") center/cover;
+  color: var(--branco);
+  text-align: center;
+  padding: 6rem 1rem;
+}
+
+.hero-title {
+  font-size: clamp(2rem, 5vw, 3rem);
+}
+
+.hero-subtitle {
+  font-size: clamp(1rem, 3vw, 1.3rem);
+  margin: 1rem 0 2rem;
+}
+
+.btn {
+  padding: 0.8rem 1.5rem;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: bold;
+  cursor: pointer;
+  display: inline-block;
+}
+
+.cta-principal {
+  background: linear-gradient(135deg, var(--laranja), var(--dourado));
+  color: var(--branco);
+}
+
+.btn-outline {
+  border: 2px solid var(--branco);
+  color: var(--branco);
+  margin-left: 1rem;
+}
+
+.design, .localizacao, .faq, .feedback, .contato {
+  padding: 4rem 1rem;
+  text-align: center;
+}
+
+.grid2 {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.card {
+  background: var(--cinza-claro);
+  padding: 1rem;
+  border-radius: 10px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+.card img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+.mapa {
+  margin-top: 2rem;
+  min-height: 350px;
+}
+
+.faq-item {
+  margin-bottom: 1rem;
+  text-align: left;
+}
+
+.faq-question {
+  width: 100%;
+  padding: 1rem;
+  background: var(--verde-escuro);
+  color: var(--branco);
+  border: none;
+  text-align: left;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.faq-answer {
+  display: none;
+  padding: 1rem;
+  background: var(--cinza-claro);
+  border-radius: 5px;
+}
+
+.feedback blockquote {
+  margin: 1rem auto;
+  font-style: italic;
+  border-left: 4px solid var(--dourado);
+  padding-left: 1rem;
+  max-width: 800px;
+}
+
+form {
+  display: grid;
+  gap: 1rem;
+  max-width: 500px;
+  margin: auto;
+}
+
+input, button {
+  padding: 0.8rem;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+}
+
+button {
+  background: var(--laranja);
+  color: var(--branco);
+  border: none;
+  cursor: pointer;
+}
+
+footer {
+  background: var(--verde-escuro);
+  color: var(--branco);
+  text-align: center;
+  padding: 1rem;
+  margin-top: 2rem;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  nav ul {
+    display: none;
+    flex-direction: column;
+    background: var(--verde-escuro);
+    position: absolute;
+    top: 60px;
+    right: 0;
+    width: 200px;
+    padding: 1rem;
+  }
+
+  nav ul.open {
+    display: flex;
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+}
